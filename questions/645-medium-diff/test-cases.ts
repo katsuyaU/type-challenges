@@ -1,4 +1,4 @@
-import { Equal, Expect, ExpectFalse, NotEqual } from '@type-challenges/utils'
+import { Equal, Expect } from '@type-challenges/utils'
 
 type Foo = {
   name: string
@@ -11,5 +11,6 @@ type Bar = {
 }
 
 type cases = [
-  Expect<Equal<Diff<Foo, Bar>, { gender: number }>>
+  Expect<Equal<Diff<Foo, Bar>, { gender: number }>>,
+  Expect<Equal<Diff<Bar,Foo>, { gender: number }>>
 ]
